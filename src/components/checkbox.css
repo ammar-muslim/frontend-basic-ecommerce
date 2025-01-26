@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.toggler-wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 45px;
+	height: 25px;
+	cursor: pointer;
+	position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+	background-color: black;
+}
+
+.checkbox {
+	display: flex;
+	flex-direction: column;
+    background-color: rgb(43 48 56);
+	margin: 10px 10px;
+	border-radius: 10px;
+	color: #fff; /* لون الخط الأبيض */
+}
+
+.line {
+	display: flex;
+	flex-direction: row;	
+	justify-content: space-between;
+	padding: 0px 20px;
+	align-items: center;
+	height: 50px;
+	color: #fff; /* لون النص الأبيض */
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+	background-color: #000; /* التوجل لونه أسود */
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: absolute;
+	border-radius: 100px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+/* Style 16 */
+.toggler-wrapper.style-16 input[type="checkbox"]:checked+.toggler-slider {
+	background-color: black; /* التوجل لونه أسود */
+}
+
+.toggler-wrapper.style-16 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+	left: calc(100% - 19px - 3px);
+	background-color: #3b82f6; /* الأزرق بدلاً من الأخضر */
+}
+
+.toggler-wrapper.style-16 .toggler-slider {
+	background-color: black; /* التوجل لونه أسود */
+	-webkit-box-shadow: 2px 4px 8px rgba(75, 108, 155, 0.5);
+	box-shadow: 2px 4px 8px rgba(75, 101, 136, 0.5);
+	border-radius: 0;
+}
+
+.toggler-wrapper.style-16 .toggler-knob {
+	width: calc(25px - 6px);
+	height: calc(25px - 6px);
+	left: 3px;
+	top: 3px;
+	background-color: #e6e6e6;
+}

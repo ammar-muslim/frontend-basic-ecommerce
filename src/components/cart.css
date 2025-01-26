@@ -1,0 +1,137 @@
+/* Styling the cart icon and badge */
+.cart {
+    position: fixed;
+    right: 25px;
+    z-index: 99 ;
+}
+
+.cart-icon{
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+/* Styling the cart list with an arrow */
+.cart-list {
+    position: relative; /* Required for the pseudo-element positioning */
+    background-color: #eeeeee;
+    top : 10px;
+    right: -15px;
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: max-content;
+    user-select: none;
+  }
+  
+  /* Adding the arrow using ::before */
+  .cart-list::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 20px; /* Adjust to position the arrow as needed */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #eeeeee;
+  }
+  
+.cart-badge {
+    position: absolute;
+    top: -20px;
+    right: 17px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  /* Cart list styling */
+  
+  /* Individual cart item styling */
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+transition: all 0.2s ease;
+justify-content: space-between;
+  }
+
+  .cart-item:hover{
+    background-color: #dadada;
+    
+  }
+  
+  /* Last item should not have a border */
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Image styling */
+  .cart-item-image {
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+  }
+  
+  /* Title styling */
+  .cart-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+    margin: 0 10px;
+    color: #333;
+  }
+  
+  /* Price styling */
+  .cart-item-price {
+    background-color: #3b82f6;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+
+  .trash-icon {
+    font-size: 18px;
+    color: #ff6347;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 10px;
+    
+  }
+
+  .reDo-icon{
+    font-size: 18px;
+    color: #ff6347;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 10px 0px 0px 0px;
+    font-weight:  bold;
+  }
+
+  .reDo-icon:hover{
+    color: rgb(221, 221, 221);
+  }

@@ -1,0 +1,105 @@
+/* General Header Styling */
+.header {
+  background-color: rgb(43, 48, 56); /* لون الهيدر */
+  color: #fff; /* لون النص */
+  padding: 0 20px; /* إزالة التباعد العلوي والسفلي */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل */
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px; /* ارتفاع محدد للهيدر */
+  display: flex; /* استخدام الفليكس مباشرة على الهيدر */
+  align-items: center; /* توسيط العناصر عموديًا */
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر أفقياً */
+  align-items: center; /* توسيط العناصر عموديًا */
+  width: 100%; /* ملء العرض */
+  max-width: 1200px; /* حد أقصى للعرض */
+  margin: 0 auto; /* توسيط المحتوى */
+  height: 100%; /* تأكد من أن الحاوية تأخذ ارتفاع الهيدر */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #3b82f6;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  max-height: 100%;
+  padding: 9px;
+}
+
+.logo:hover {
+  color: #90cdf4; /* لون فاتح عند التمرير */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Navigation Styling */
+.nav-list {
+  display: flex;
+  align-items: center; /* توسيط العناصر داخل القائمة */
+  gap: 20px; /* المسافة بين الروابط */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex; /* يجعل النص يتوسط دائمًا */
+  align-items: center;
+}
+
+.nav-list a:hover {
+  color: #3b82f6; /* لون الروابط أزرق عند التمرير */
+  transform: translateY(-2px); /* رفع الرابط قليلاً */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-list {
+    gap: 10px; /* تقليل الفجوات بين الروابط على الشاشات الصغيرة */
+  }
+
+  .logo {
+    font-size: 1.4rem; /* تقليل حجم اللوجو قليلاً */
+  }
+
+  .nav-list a {
+    font-size: 0.9rem; /* تقليل حجم النص */
+  }
+}
+
+/* Additional Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
+  .header {
+    padding: 0 10px; /* تقليل التباعد الجانبي على الشاشات الصغيرة */
+    height: fit-content;
+  }
+ .header .container {
+ }
+  .nav-list {
+    gap: 5px; /* تقليل الفجوات بين الروابط */
+    padding-bottom: 10px;
+  }
+
+  .nav-list a {
+    font-size: 0.8rem; /* تقليل حجم النص أكثر */
+  }
+}

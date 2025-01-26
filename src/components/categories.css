@@ -1,0 +1,158 @@
+🎨 General Styles
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* 🛒 Product Card Styles */
+  .category {
+    width: fit-content;
+    background-color: #242222;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .category:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 🖼️ Product Image */
+  .category img {
+    width: 80%;
+    object-fit: contain; /* يظهر الصورة بالكامل بدون قص */
+    object-position: center; /* يوسّط الصورة في الإطار */
+    border-bottom: 1px solid #ddd;
+    background-color: #242222; /* خلفية لو الصورة مش مكملة الإطار */
+  }
+  
+
+
+  
+  
+  /* 📝 Product Title */
+  .category h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 15px;
+  }
+  
+  /* 📄 Product Description */
+  .category p {
+    font-size: 0.95rem;
+    color: #fff;
+    margin: 0 15px 15px;
+    line-height: 1.4;
+  }
+  
+  /* ⏳ Loading Text */
+  .loading-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    color: #242222;
+  }
+  
+
+
+
+
+
+
+
+
+
+.categories-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color:#242222 ;
+  flex-wrap: wrap;
+  margin: 0px 0px 10px;
+}
+
+
+.checkbox {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+.categories-container title{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0px 0px;
+  padding: 0px;
+}
+.categories-container img {
+  width: 80%;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  background-color: #000000;
+  border-radius: 10px; ;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.categories-container .checkbox:hover   {
+  box-shadow: 0 8px 15px rgba(81, 128, 190, 0.2);
+}
+.categories-container .checkbox .desc{
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: absolute;
+  top: 3px;
+  left: 30px;
+  padding: 20px;
+  width: 47%;
+  height: 83px;
+  border-radius: 10px ;
+  color: #fff;
+  background-color: #000000;
+  opacity: 0%;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0;
+  cursor: pointer;
+  font-size: 10px;
+}
+.categories-container .checkbox:hover .desc { 
+  opacity: 70%;
+
+}
+
+
+  /* 📱 Responsive Design */
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    .category {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 480px) {
+    .category {
+      width: 100%;
+    }
+    .categories-container img {
+    height: 200px;
+    width: 80%;
+  }
+    .category h1 {
+      font-size: 1.1rem;
+    }
+  
+    .category p {
+      font-size: 0.9rem;
+    }
+  }
+  

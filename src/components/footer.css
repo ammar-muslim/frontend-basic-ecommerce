@@ -1,0 +1,121 @@
+/* Footer Styles */
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-section {
+  flex: 1 1 30%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.logo {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.logo-section p {
+  margin: 0;
+  color: #ccc;
+}
+
+.links-section {
+  flex: 1 1 30%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.links-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin: 5px 0;
+}
+
+.link {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.contact-section {
+  flex: 1 1 30%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.contact-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.contact-section p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.whatsapp-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.copy-right {
+  text-align: center;
+  margin-top: 20px;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-section,
+  .links-section,
+  .contact-section {
+    flex: 1 1 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .links-section h3,
+  .contact-section h3 {
+    font-size: 16px;
+  }
+
+  .whatsapp-button {
+    padding: 8px 12px;
+  }
+}
