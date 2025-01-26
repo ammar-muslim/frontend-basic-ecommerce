@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from 'react';
-import './Checkbox.css';
+import './checkbox.css';
 import StoreContext from '../hooks/StoreContext';
 import qs from 'qs';
 
